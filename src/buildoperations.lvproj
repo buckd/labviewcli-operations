@@ -30,7 +30,7 @@
 			<Item Name="SetConditionalSymbol.lvclass" Type="LVClass" URL="../operations/SetConditionalSymbol/SetConditionalSymbol.lvclass"/>
 		</Item>
 		<Item Name="Utilities" Type="Folder">
-			<Item Name="BuildSecurity.lvlib" Type="Library" URL="../utilities/BuildSecurity/BuildSecurity.lvlib"/>
+			<Item Name="BuildSecurity.lvlib" Type="Library" URL="../operations/Utilities/BuildSecurity/BuildSecurity.lvlib"/>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -84,7 +84,7 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../build/export/release/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{8A1E623D-E6A7-4362-AE9E-8977BC1A0041}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{69E12CBA-55AC-42AD-AE44-B13739E395A4}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
@@ -156,7 +156,7 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../build/export/debug/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{8A1E623D-E6A7-4362-AE9E-8977BC1A0041}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{69E12CBA-55AC-42AD-AE44-B13739E395A4}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
@@ -217,14 +217,14 @@
 				<Property Name="Destination[2].type" Type="Str">userFolder</Property>
 				<Property Name="Destination[3].name" Type="Str">Operations</Property>
 				<Property Name="Destination[3].parent" Type="Str">{7E0E9A2B-A776-4F8B-8A0E-9ED0B41DEA85}</Property>
-				<Property Name="Destination[3].tag" Type="Str">{030752CD-78C0-4ECC-9DFC-8EE7ADBE7309}</Property>
+				<Property Name="Destination[3].tag" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
 				<Property Name="Destination[3].type" Type="Str">userFolder</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
 				<Property Name="INST_buildLocation" Type="Path">../build/installer</Property>
 				<Property Name="INST_buildLocation.type" Type="Str">relativeToCommon</Property>
 				<Property Name="INST_buildSpecName" Type="Str">installer</Property>
-				<Property Name="INST_defaultDir" Type="Str">{030752CD-78C0-4ECC-9DFC-8EE7ADBE7309}</Property>
+				<Property Name="INST_defaultDir" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
 				<Property Name="INST_productName" Type="Str">LabVIEW CLI Additional Build Operations</Property>
 				<Property Name="INST_productVersion" Type="Str">1.0.0</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
@@ -237,8 +237,8 @@
 				<Property Name="RegDest[0].dirTag" Type="Str">{DDFAFC8B-E728-4AC8-96DE-B920EBB97A86}</Property>
 				<Property Name="RegDest[0].parentTag" Type="Str">2</Property>
 				<Property Name="RegDestCount" Type="Int">1</Property>
-				<Property Name="Source[0].dest" Type="Str">{030752CD-78C0-4ECC-9DFC-8EE7ADBE7309}</Property>
-				<Property Name="Source[0].File[0].dest" Type="Str">{030752CD-78C0-4ECC-9DFC-8EE7ADBE7309}</Property>
+				<Property Name="Source[0].dest" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
+				<Property Name="Source[0].File[0].dest" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
 				<Property Name="Source[0].File[0].name" Type="Str">ExecuteAllBuildSpecs.lvclass</Property>
 				<Property Name="Source[0].File[0].tag" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
 				<Property Name="Source[0].FileCount" Type="Int">1</Property>
