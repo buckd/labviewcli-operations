@@ -84,7 +84,7 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../build/export/release/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{69E12CBA-55AC-42AD-AE44-B13739E395A4}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{6731DF69-F7C0-45FF-AF21-84FE76DF80D1}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
@@ -156,7 +156,7 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../build/export/debug/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{69E12CBA-55AC-42AD-AE44-B13739E395A4}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{6731DF69-F7C0-45FF-AF21-84FE76DF80D1}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
@@ -202,7 +202,7 @@
 				<Property Name="Source[8].type" Type="Str">Container</Property>
 				<Property Name="SourceCount" Type="Int">9</Property>
 			</Item>
-			<Item Name="installer" Type="Installer">
+			<Item Name="installer - release" Type="Installer">
 				<Property Name="Destination[0].name" Type="Str">National Instruments</Property>
 				<Property Name="Destination[0].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
 				<Property Name="Destination[0].tag" Type="Str">{AF54264E-4849-4217-94B2-BA861F054381}</Property>
@@ -221,12 +221,12 @@
 				<Property Name="Destination[3].type" Type="Str">userFolder</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
-				<Property Name="INST_buildLocation" Type="Path">../build/installer</Property>
+				<Property Name="INST_buildLocation" Type="Path">../build/installer/release</Property>
 				<Property Name="INST_buildLocation.type" Type="Str">relativeToCommon</Property>
-				<Property Name="INST_buildSpecName" Type="Str">installer</Property>
+				<Property Name="INST_buildSpecName" Type="Str">installer - release</Property>
 				<Property Name="INST_defaultDir" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
 				<Property Name="INST_productName" Type="Str">LabVIEW CLI Additional Build Operations</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.0</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.1</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">14018008</Property>
 				<Property Name="MSI_distID" Type="Str">{2EB41DC8-7032-4901-B756-C9D34A60199E}</Property>
@@ -244,6 +244,51 @@
 				<Property Name="Source[0].FileCount" Type="Int">1</Property>
 				<Property Name="Source[0].name" Type="Str">release</Property>
 				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/release</Property>
+				<Property Name="Source[0].type" Type="Str">SDIST</Property>
+				<Property Name="SourceCount" Type="Int">1</Property>
+			</Item>
+			<Item Name="installer - debug" Type="Installer">
+				<Property Name="Destination[0].name" Type="Str">National Instruments</Property>
+				<Property Name="Destination[0].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
+				<Property Name="Destination[0].tag" Type="Str">{AF54264E-4849-4217-94B2-BA861F054381}</Property>
+				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
+				<Property Name="Destination[1].name" Type="Str">Shared</Property>
+				<Property Name="Destination[1].parent" Type="Str">{AF54264E-4849-4217-94B2-BA861F054381}</Property>
+				<Property Name="Destination[1].tag" Type="Str">{EABE6F59-2B39-4A6A-ACA6-9C4098391192}</Property>
+				<Property Name="Destination[1].type" Type="Str">userFolder</Property>
+				<Property Name="Destination[2].name" Type="Str">LabVIEW CLI</Property>
+				<Property Name="Destination[2].parent" Type="Str">{EABE6F59-2B39-4A6A-ACA6-9C4098391192}</Property>
+				<Property Name="Destination[2].tag" Type="Str">{7E0E9A2B-A776-4F8B-8A0E-9ED0B41DEA85}</Property>
+				<Property Name="Destination[2].type" Type="Str">userFolder</Property>
+				<Property Name="Destination[3].name" Type="Str">Operations</Property>
+				<Property Name="Destination[3].parent" Type="Str">{7E0E9A2B-A776-4F8B-8A0E-9ED0B41DEA85}</Property>
+				<Property Name="Destination[3].tag" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
+				<Property Name="Destination[3].type" Type="Str">userFolder</Property>
+				<Property Name="DestinationCount" Type="Int">4</Property>
+				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
+				<Property Name="INST_buildLocation" Type="Path">../build/installer/debug</Property>
+				<Property Name="INST_buildLocation.type" Type="Str">relativeToCommon</Property>
+				<Property Name="INST_buildSpecName" Type="Str">installer - debug</Property>
+				<Property Name="INST_defaultDir" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
+				<Property Name="INST_productName" Type="Str">LabVIEW CLI Additional Build Operations (debug)</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.1</Property>
+				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
+				<Property Name="InstSpecVersion" Type="Str">14018008</Property>
+				<Property Name="MSI_distID" Type="Str">{B070454E-075B-44F1-A548-47F6787909B7}</Property>
+				<Property Name="MSI_osCheck" Type="Int">0</Property>
+				<Property Name="MSI_upgradeCode" Type="Str">{7A5521DA-F6E6-45DC-90A3-BF92B5DC94C3}</Property>
+				<Property Name="MSI_windowTitle" Type="Str">LabVIEW CLI Additional Build Operations</Property>
+				<Property Name="RegDest[0].dirName" Type="Str">Software</Property>
+				<Property Name="RegDest[0].dirTag" Type="Str">{DDFAFC8B-E728-4AC8-96DE-B920EBB97A86}</Property>
+				<Property Name="RegDest[0].parentTag" Type="Str">2</Property>
+				<Property Name="RegDestCount" Type="Int">1</Property>
+				<Property Name="Source[0].dest" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
+				<Property Name="Source[0].File[0].dest" Type="Str">{B0255D59-F611-4C3E-B22F-D64E6BDF7B79}</Property>
+				<Property Name="Source[0].File[0].name" Type="Str">ExecuteAllBuildSpecs.lvclass</Property>
+				<Property Name="Source[0].File[0].tag" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
+				<Property Name="Source[0].FileCount" Type="Int">1</Property>
+				<Property Name="Source[0].name" Type="Str">debug</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/debug</Property>
 				<Property Name="Source[0].type" Type="Str">SDIST</Property>
 				<Property Name="SourceCount" Type="Int">1</Property>
 			</Item>
