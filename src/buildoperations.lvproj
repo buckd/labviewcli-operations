@@ -21,28 +21,48 @@
 			<Item Name="OperationErrorType.ctl" Type="VI" URL="/&lt;nishared&gt;/LabVIEW CLI/Operations/Utilities/OperationErrorType.ctl"/>
 			<Item Name="Verbosity.ctl" Type="VI" URL="/&lt;nishared&gt;/LabVIEW CLI/Operations/Utilities/Verbosity.ctl"/>
 		</Item>
-		<Item Name="ExecuteAllBuildSpecs.lvclass" Type="LVClass" URL="../operations/ExecuteAllBuildSpecs/ExecuteAllBuildSpecs.lvclass"/>
-		<Item Name="ExecuteBuildSpecAllTargets.lvclass" Type="LVClass" URL="../operations/ExecuteBuildSpecAllTargets/ExecuteBuildSpecAllTargets.lvclass"/>
-		<Item Name="ExecuteMultipleBuildSpecs.lvclass" Type="LVClass" URL="../operations/ExecuteMultipleBuildSpecs/ExecuteMultipleBuildSpecs.lvclass"/>
-		<Item Name="SaveForPrevious.lvclass" Type="LVClass" URL="../operations/SaveForPrevious/SaveForPrevious.lvclass"/>
-		<Item Name="SetConditionalSymbol.lvclass" Type="LVClass" URL="../operations/SetConditionalSymbol/SetConditionalSymbol.lvclass"/>
+		<Item Name="Operations" Type="Folder">
+			<Item Name="ExecuteAllBuildSpecs.lvclass" Type="LVClass" URL="../operations/ExecuteAllBuildSpecs/ExecuteAllBuildSpecs.lvclass"/>
+			<Item Name="ExecuteBuildSpecAllTargets.lvclass" Type="LVClass" URL="../operations/ExecuteBuildSpecAllTargets/ExecuteBuildSpecAllTargets.lvclass"/>
+			<Item Name="ExecuteMultipleBuildSpecs.lvclass" Type="LVClass" URL="../operations/ExecuteMultipleBuildSpecs/ExecuteMultipleBuildSpecs.lvclass"/>
+			<Item Name="SaveForPrevious.lvclass" Type="LVClass" URL="../operations/SaveForPrevious/SaveForPrevious.lvclass"/>
+			<Item Name="SecureRunVI.lvclass" Type="LVClass" URL="../operations/SecureRunVI/SecureRunVI.lvclass"/>
+			<Item Name="SetConditionalSymbol.lvclass" Type="LVClass" URL="../operations/SetConditionalSymbol/SetConditionalSymbol.lvclass"/>
+		</Item>
+		<Item Name="Utilities" Type="Folder">
+			<Item Name="BuildSecurity.lvlib" Type="Library" URL="../utilities/BuildSecurity/BuildSecurity.lvlib"/>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
+				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
+				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
+				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 				<Item Name="Compare Two Paths.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Compare Two Paths.vi"/>
+				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="Error Code Database.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Code Database.vi"/>
+				<Item Name="Get LV Class Default Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Default Value.vi"/>
 				<Item Name="GetTargetBuildSpecs (project reference).vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs (project reference).vi"/>
 				<Item Name="GetTargetBuildSpecs.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs.vi"/>
 				<Item Name="List Directory and LLBs.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/List Directory and LLBs.vi"/>
 				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
+				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
+				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
+				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="Recursive File List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Recursive File List.vi"/>
+				<Item Name="TRef Traverse.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef Traverse.vi"/>
+				<Item Name="TRef TravTarget.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef TravTarget.ctl"/>
+				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
+				<Item Name="VI Scripting - Traverse.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/traverseref.llb/VI Scripting - Traverse.lvlib"/>
+				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
-			<Item Name="export" Type="Source Distribution">
+			<Property Name="NI.SortType" Type="Int">3</Property>
+			<Item Name="release" Type="Source Distribution">
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{EF83227B-5F06-403D-BD39-BEA72A97EBAC}</Property>
 				<Property Name="Bld_buildSpecDescription" Type="Str">Exports all operations.</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">export</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">release</Property>
 				<Property Name="Bld_excludedDirectory[0]" Type="Path">vi.lib</Property>
 				<Property Name="Bld_excludedDirectory[0].pathType" Type="Str">relativeToAppDir</Property>
 				<Property Name="Bld_excludedDirectory[1]" Type="Path">resource/objmgr</Property>
@@ -53,38 +73,33 @@
 				<Property Name="Bld_excludedDirectory[4]" Type="Path">user.lib</Property>
 				<Property Name="Bld_excludedDirectory[4].pathType" Type="Str">relativeToAppDir</Property>
 				<Property Name="Bld_excludedDirectoryCount" Type="Int">5</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../build/export</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../build/export/release</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{2703BC98-BADF-482B-9F49-8601C0DA9D95}</Property>
 				<Property Name="Bld_removeVIObj" Type="Int">2</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
-				<Property Name="Destination[0].path" Type="Path">../build/export</Property>
+				<Property Name="Destination[0].path" Type="Path">../build/export/release</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../build/export/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../build/export/release/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{CDBE3ABE-E605-4125-A238-F6F75FD203CF}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8A1E623D-E6A7-4362-AE9E-8977BC1A0041}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/ExecuteAllBuildSpecs.lvclass</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
 				<Property Name="Source[1].type" Type="Str">Library</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/ExecuteBuildSpecAllTargets.lvclass</Property>
-				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Operations/ExecuteBuildSpecAllTargets.lvclass</Property>
 				<Property Name="Source[2].type" Type="Str">Library</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/ExecuteMultipleBuildSpecs.lvclass</Property>
-				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Operations/ExecuteMultipleBuildSpecs.lvclass</Property>
 				<Property Name="Source[3].type" Type="Str">Library</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref">/My Computer/SaveForPrevious.lvclass</Property>
-				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Operations/SaveForPrevious.lvclass</Property>
 				<Property Name="Source[4].type" Type="Str">Library</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/SetConditionalSymbol.lvclass</Property>
-				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Operations/SetConditionalSymbol.lvclass</Property>
 				<Property Name="Source[5].type" Type="Str">Library</Property>
 				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
@@ -92,7 +107,100 @@
 				<Property Name="Source[6].itemID" Type="Ref">/My Computer/ExcludedDependencies</Property>
 				<Property Name="Source[6].sourceInclusion" Type="Str">Exclude</Property>
 				<Property Name="Source[6].type" Type="Str">Container</Property>
-				<Property Name="SourceCount" Type="Int">7</Property>
+				<Property Name="Source[7].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[7].Container.applyProperties" Type="Bool">true</Property>
+				<Property Name="Source[7].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Operations</Property>
+				<Property Name="Source[7].properties[0].type" Type="Str">Allow debugging</Property>
+				<Property Name="Source[7].properties[0].value" Type="Bool">false</Property>
+				<Property Name="Source[7].properties[1].type" Type="Str">Auto error handling</Property>
+				<Property Name="Source[7].properties[1].value" Type="Bool">false</Property>
+				<Property Name="Source[7].propertiesCount" Type="Int">2</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[7].type" Type="Str">Container</Property>
+				<Property Name="Source[8].Container.applyProperties" Type="Bool">true</Property>
+				<Property Name="Source[8].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Utilities</Property>
+				<Property Name="Source[8].properties[0].type" Type="Str">Allow debugging</Property>
+				<Property Name="Source[8].properties[0].value" Type="Bool">false</Property>
+				<Property Name="Source[8].properties[1].type" Type="Str">Auto error handling</Property>
+				<Property Name="Source[8].properties[1].value" Type="Bool">false</Property>
+				<Property Name="Source[8].propertiesCount" Type="Int">2</Property>
+				<Property Name="Source[8].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">9</Property>
+			</Item>
+			<Item Name="debug" Type="Source Distribution">
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{1D038F4A-9A54-49D7-A391-309543500229}</Property>
+				<Property Name="Bld_buildSpecDescription" Type="Str">Exports all operations.</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">debug</Property>
+				<Property Name="Bld_excludedDirectory[0]" Type="Path">vi.lib</Property>
+				<Property Name="Bld_excludedDirectory[0].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[1]" Type="Path">resource/objmgr</Property>
+				<Property Name="Bld_excludedDirectory[1].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[2]" Type="Path">/C/ProgramData/National Instruments/InstCache/14.0</Property>
+				<Property Name="Bld_excludedDirectory[3]" Type="Path">instr.lib</Property>
+				<Property Name="Bld_excludedDirectory[3].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[4]" Type="Path">user.lib</Property>
+				<Property Name="Bld_excludedDirectory[4].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectoryCount" Type="Int">5</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../build/export/debug</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{45C9A120-4AA9-41BB-87DB-C0DBD7CB1202}</Property>
+				<Property Name="Bld_removeVIObj" Type="Int">2</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
+				<Property Name="Destination[0].path" Type="Path">../build/export/debug</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../build/export/debug/data</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8A1E623D-E6A7-4362-AE9E-8977BC1A0041}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
+				<Property Name="Source[1].type" Type="Str">Library</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Operations/ExecuteBuildSpecAllTargets.lvclass</Property>
+				<Property Name="Source[2].type" Type="Str">Library</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Operations/ExecuteMultipleBuildSpecs.lvclass</Property>
+				<Property Name="Source[3].type" Type="Str">Library</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Operations/SaveForPrevious.lvclass</Property>
+				<Property Name="Source[4].type" Type="Str">Library</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Operations/SetConditionalSymbol.lvclass</Property>
+				<Property Name="Source[5].type" Type="Str">Library</Property>
+				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/ExcludedDependencies</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Exclude</Property>
+				<Property Name="Source[6].type" Type="Str">Container</Property>
+				<Property Name="Source[7].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[7].Container.applyProperties" Type="Bool">true</Property>
+				<Property Name="Source[7].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Operations</Property>
+				<Property Name="Source[7].properties[0].type" Type="Str">Allow debugging</Property>
+				<Property Name="Source[7].properties[0].value" Type="Bool">true</Property>
+				<Property Name="Source[7].properties[1].type" Type="Str">Auto error handling</Property>
+				<Property Name="Source[7].properties[1].value" Type="Bool">true</Property>
+				<Property Name="Source[7].propertiesCount" Type="Int">2</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[7].type" Type="Str">Container</Property>
+				<Property Name="Source[8].Container.applyProperties" Type="Bool">true</Property>
+				<Property Name="Source[8].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Utilities</Property>
+				<Property Name="Source[8].properties[0].type" Type="Str">Allow debugging</Property>
+				<Property Name="Source[8].properties[0].value" Type="Bool">true</Property>
+				<Property Name="Source[8].properties[1].type" Type="Str">Auto error handling</Property>
+				<Property Name="Source[8].properties[1].value" Type="Bool">true</Property>
+				<Property Name="Source[8].propertiesCount" Type="Int">2</Property>
+				<Property Name="Source[8].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">9</Property>
 			</Item>
 			<Item Name="installer" Type="Installer">
 				<Property Name="Destination[0].name" Type="Str">National Instruments</Property>
@@ -132,10 +240,10 @@
 				<Property Name="Source[0].dest" Type="Str">{030752CD-78C0-4ECC-9DFC-8EE7ADBE7309}</Property>
 				<Property Name="Source[0].File[0].dest" Type="Str">{030752CD-78C0-4ECC-9DFC-8EE7ADBE7309}</Property>
 				<Property Name="Source[0].File[0].name" Type="Str">ExecuteAllBuildSpecs.lvclass</Property>
-				<Property Name="Source[0].File[0].tag" Type="Ref">/My Computer/ExecuteAllBuildSpecs.lvclass</Property>
+				<Property Name="Source[0].File[0].tag" Type="Ref">/My Computer/Operations/ExecuteAllBuildSpecs.lvclass</Property>
 				<Property Name="Source[0].FileCount" Type="Int">1</Property>
-				<Property Name="Source[0].name" Type="Str">export</Property>
-				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/export</Property>
+				<Property Name="Source[0].name" Type="Str">release</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/release</Property>
 				<Property Name="Source[0].type" Type="Str">SDIST</Property>
 				<Property Name="SourceCount" Type="Int">1</Property>
 			</Item>
